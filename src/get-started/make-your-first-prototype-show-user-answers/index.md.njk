@@ -1,0 +1,48 @@
+---
+layout: layout-pane.njk
+section: Get started
+title: Show the user's answers on your 'Check your answers' page
+description:
+show_subnav: true
+theme: Make your first prototype
+order: 5
+---
+
+To display a user's answers on the 'Check your answers' page, you can use this [Nunjucks](https://mozilla.github.io/nunjucks/) code:
+
+```javascript
+{{ data['name-of-input'] }}
+```
+
+Where `name-of-input` is the value you used in the `name` parameter on the question page. For example:
+
+```javascript
+{{ data['number-of-balls'] }}
+```
+
+If you do research with real user data, you must [use an incognito window and clear all user data](https://www.gov.uk/).
+
+Find out how to [redirect users based on their answers](https://www.gov.uk/). *link to separate guide*
+
+## Show the answer to question 1
+
+1. Open the `check-your-answers.html` file in your `app/views` folder.
+2. Find the `<dt>` tag that contains the text `Name`.
+3. Replace `Name` with `Number of balls you can juggle`.
+4. In the `<dd>` tag on the next line, replace `Sarah Philips` with `{{ data['number-of-balls'] }}`.
+
+You should also replace `<span class="govuk-visually-hidden"> name</span>` with `<span class="govuk-visually-hidden"> number of balls you can juggle</span>`.
+
+The text in the `<span>` tags will be read out by screen readers, but will not appear on the page.
+
+## Show the answer to question 2
+
+1. Find the `<dt>` tag that contains the text `Date of birth`.
+2. Replace `Date of birth` with `Your most impressive juggling trick`.
+3. In the `<dd>` tag on the next line, replace `5 January 1978` with `{{ data['name-of-trick'] }}`.
+
+You should also replace `<span class="govuk-visually-hidden"> date of birth</span>` with `<span class="govuk-visually-hidden"> your most impressive juggling trick</span>`.
+
+Go to http://localhost:3000/start and answer the questions to check it works.
+
+If you click one of the **Change** links, you'll go back to a question page - but user data will not appear. Find out [how to make the **Change** links work](https://www.gov.uk/).

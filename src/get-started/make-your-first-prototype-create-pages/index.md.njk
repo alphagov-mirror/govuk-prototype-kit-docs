@@ -1,0 +1,56 @@
+---
+layout: layout-pane.njk
+section: Get started
+title: Create pages by copying templates
+description:
+show_subnav: true
+theme: Make your first prototype
+order: 2
+---
+
+You can create pages by copying templates from the `docs/views/templates` folder to the `app/views` folder in Atom.
+
+To copy a file in Atom:
+
+1. Right-click a file and select **Copy**.
+2. Right-click the folder you want to copy the file to and select **Paste**.
+
+## Start page
+
+Copy the `start.html` file from `docs/views/templates` to `app/views`.
+
+Go to http://localhost:3000/start in your browser to check it worked. You can go to http://localhost:3000/[yourpagename] to see any page you add to `app/views`.
+
+### Change the service name
+
+1. Open the `config.js` file in your `app/` folder.
+2. Change the value of the `serviceName` parameter to 'Apply for a juggling licence'
+
+You'll need to restart xxx for the change to take effect on http://localhost:3000/start.
+
+## Question pages
+
+Make two copies of the `question.html` file from `docs/views/templates` to `app/views`.
+
+Rename the files:
+
+- `juggling-balls.html`
+- `juggling-tricks.html`
+
+Go to the following urls to check your pages:
+
+- http://localhost:3000/juggling-balls
+- http://localhost:3000/juggling-tricks
+
+You can edit the `h1` tag in each html file to create the question text. For example:
+
+- `<h1>How many balls can you juggle?</h1>`
+- `<h1>What is your most impressive juggling trick?</h1>`
+
+## 'Check your answers' page
+
+Copy the `check-your-answers.html` file from `docs/views/templates` to `app/views`.
+
+## Confirmation page
+
+Copy the `confirmation.html` file from `docs/views/templates` to `app/views`.

@@ -1,0 +1,48 @@
+---
+layout: layout-pane.njk
+section: Get started
+title: Add questions
+description:
+show_subnav: true
+theme: Make your first prototype
+order: 3
+---
+
+You can copy code from the [GOV.UK Design System](https://design-system.service.gov.uk/) to add page elements like radio buttons and text inputs.
+
+## Add radios to question 1
+
+1. Go to the [stacked radios section of the Design System](https://design-system.service.gov.uk/components/radios/#stacked-radios).
+2. Click **HTML** and copy the example HTML code.
+3. Open `juggling-balls.html` in your `app/views` folder.
+4. Replace the 2 example `<p>...</p>` paragraphs with the example HTML code you copied.
+5. In your copied code, replace the text in the `<h1>` tags with the page's title text: `How many balls can you juggle?`.
+
+Replace the text in the 3 `<label>` tags with:
+
+- `3 or more`
+- `1 or 2`
+- `None - I cannot juggle`
+
+Replace the 3 `value` parameters with:
+
+- `value="3 or more"`
+- `value="1 or 2"`
+- `value="None - I cannot juggle"`
+
+Replace all 3 `name="where-do-you-live"` parameters with `name="number-of-balls"`.
+
+Your page should now look like this:
+[image]
+
+## Add a text input to question 2
+
+1. Go to the [textarea page of the Design System](https://design-system.service.gov.uk/components/textarea/).
+2. Click **HTML** and copy the example HTML code.
+3. Open `juggling-tricks.html` in your `app/views` folder
+4. Replace the 2 example `<p>...</p>` paragraphs with the example HTML code you copied.
+5. Delete the `label` and `span` sections. (Do not delete these in a real service.)
+6. Replace `name="more-detail"` with `name="name-of-trick"`.
+
+Your page should now look like this:
+[image]
