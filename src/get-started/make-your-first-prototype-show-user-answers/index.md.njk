@@ -11,13 +11,17 @@ order: 11
 To display a user's answers on the 'Check your answers' page, you can use this [Nunjucks](https://mozilla.github.io/nunjucks/) code:
 
 ```javascript
+{%raw%}
 {{ data['name-of-input'] }}
+{%endraw%}
 ```
 
 Where `name-of-input` is the value you used in the `name` parameter on the question page. For example:
 
 ```javascript
+{%raw%}
 {{ data['number-of-balls'] }}
+{%endraw%}
 ```
 
 If you do research with real user data, you must [use an incognito window and clear all user data](https://www.gov.uk/).
@@ -29,7 +33,7 @@ Find out how to [redirect users based on their answers](https://www.gov.uk/). *l
 1. Open the `check-your-answers.html` file in your `app/views` folder.
 2. Find the `<dt>` tag that contains the text `Name`.
 3. Replace `Name` with `Number of balls you can juggle`.
-4. In the `<dd>` tag on the next line, replace `Sarah Philips` with `{{ data['number-of-balls'] }}`.
+4. In the `<dd>` tag on the next line, replace `Sarah Philips` with `{%raw%}{{ data['number-of-balls'] }}{%endraw%}`.
 
 You should also replace `<span class="govuk-visually-hidden"> name</span>` with `<span class="govuk-visually-hidden"> number of balls you can juggle</span>`.
 
@@ -39,7 +43,7 @@ The text in the `<span>` tags will be read out by screen readers, but will not a
 
 1. Find the `<dt>` tag that contains the text `Date of birth`.
 2. Replace `Date of birth` with `Your most impressive juggling trick`.
-3. In the `<dd>` tag on the next line, replace `5 January 1978` with `{{ data['name-of-trick'] }}`.
+3. In the `<dd>` tag on the next line, replace `5 January 1978` with `{%raw%}{{ data['name-of-trick'] }}{%endraw%}`.
 
 You should also replace `<span class="govuk-visually-hidden"> date of birth</span>` with `<span class="govuk-visually-hidden"> your most impressive juggling trick</span>`.
 
