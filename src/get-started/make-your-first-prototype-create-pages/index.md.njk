@@ -1,55 +1,71 @@
 ---
 layout: layout-pane.njk
 section: Get started
-title: Create pages by copying templates
+title: Create pages
 description:
 theme: Tutorial
 order: 8
 ---
 
-You can create pages by copying templates from the `docs/views/templates` folder to the `app/views` folder in Atom.
+## Open your project
+
+### Mac
+
+In Atom, select **File** then **Open**. Then select your project folder.
+
+### Windows
+
+In Atom, select **File** then **Open Folder**. Then select your project folder.
+
+## Create pages by copying templates
+
+Create pages by copying template files.
 
 To copy a file in Atom:
 
-1. Right-click a file and select **Copy**.
-2. Right-click the folder you want to copy the file to and select **Paste**.
+1. Right-click a file in the folders list on the left and select **Copy**.
+2. Right-click the folder you want to copy the file into and select **Paste**.   
 
-## Start page
+### Create a start page
 
 Copy the `start.html` file from `docs/views/templates` to `app/views`.
 
-Go to http://localhost:3000/start in your browser to check it worked. You can go to http://localhost:3000/[yourpagename] to see any page you add to `app/views`.
+Preview the pages in your prototype by going to ht<span>tp</span>://localhost:3000/NAME-OF-HTML-FILE in your web browser. For example, go to [http://localhost:3000/start](http://localhost:3000/start) to preview `start.html`.
 
-### Change the service name
+#### Change the service name
 
-1. Open the `config.js` file in your `app/` folder.
-2. Change the value of the `serviceName` parameter to 'Apply for a juggling licence'
+1. Open the `config.js` file in your `app` folder.
+2. Change the value of the `serviceName` variable from `My service name` to `Apply for a juggling licence`.
+3. Press Cmd+S on Mac or Ctrl+S on Windows to save your change.
 
-You'll need to restart xxx for the change to take effect on http://localhost:3000/start.
+This will change the service name on every page.
 
-## Question pages
+You must save every time you make a change to a file. Your changes will automatically show in your browser when you refresh the page.
 
-Make two copies of the `question.html` file from `docs/views/templates` to `app/views`.
+### Question pages
 
-Rename the files:
+Make 2 copies of the `question.html` file from `docs/views/templates` to `app/views`.
+
+Rename the 2 file copies to:
 
 - `juggling-balls.html`
-- `juggling-tricks.html`
+- `juggling-trick.html`
 
-Go to the following urls to check your pages:
+Go to the following URLs to check your pages:
 
 - http://localhost:3000/juggling-balls
-- http://localhost:3000/juggling-tricks
+- http://localhost:3000/juggling-trick
 
-You can edit the `h1` tag in each html file to create the question text. For example:
+In the ‘juggling-balls.html’ file, change the text inside the `h1` tag from `Heading or question goes here` to `How many balls can you juggle?`.
 
-- `<h1>How many balls can you juggle?</h1>`
-- `<h1>What is your most impressive juggling trick?</h1>`
+In the ‘juggling-trick.html’ file, change the text inside the `h1` tag to `What is your most impressive juggling trick?`.
 
-## 'Check your answers' page
+### 'Check your answers' page
 
 Copy the `check-your-answers.html` file from `docs/views/templates` to `app/views`.
 
-## Confirmation page
+### Confirmation page
 
 Copy the `confirmation.html` file from `docs/views/templates` to `app/views`.
+
+[Next (link your pages together)](/get-started/make-your-first-prototype-link-pages-together)
